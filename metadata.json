@@ -1,0 +1,8 @@
+{
+  "name": "Remix Aurevon Technology Premium Site",
+  "description": "A minimalist, cinematic, and responsive institutional website designed to project high-end technological authority and corporate sophistication.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

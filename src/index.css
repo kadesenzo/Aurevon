@@ -1,0 +1,91 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: 'Sora', sans-serif;
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  /* Official Brand Tokens from Prompt */
+  --color-brand-black: #0B0A0F;
+  --color-brand-graphite: #343A40;
+  --color-brand-silver: #C5C9D0;
+  --color-brand-white: #F5F7FA;
+  --color-brand-muted: #6B7280;
+  --color-brand-purple: #7928CA;
+  --color-brand-violet: #A855F7;
+  --color-brand-violet-glow: rgba(168, 85, 247, 0.22);
+}
+
+:root {
+  --black: #0B0A0F;
+  --graphite: #343A40;
+  --silver: #C5C9D0;
+  --white: #F5F7FA;
+  --purple: #7928CA;
+  --violet: #A855F7;
+}
+
+html {
+  scroll-behavior: smooth;
+  color-scheme: dark;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--black);
+  color: var(--white);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6, .font-display {
+  font-family: var(--font-display);
+}
+
+/* Metallic text gradient utility */
+.text-metallic {
+  background: linear-gradient(135deg, #8E95A0 0%, #F5F7FA 45%, #C5C9D0 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Elegant Violet/Purple Metallic Text Gradient */
+.text-metallic-purple {
+  background: linear-gradient(135deg, #C5C9D0 0%, #E9D5FF 35%, #C084FC 70%, #A855F7 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Subtle luxury purple ambient glow */
+.glow-purple {
+  box-shadow: 0 0 25px rgba(168, 85, 247, 0.2);
+}
+
+/* Subtle Film Grain Noise Texture */
+.bg-noise {
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.035'/%3E%3C/svg%3E");
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0B0A0F;
+}
+::-webkit-scrollbar-thumb {
+  background: #242930;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #343A40;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
